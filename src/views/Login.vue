@@ -256,15 +256,12 @@ export default {
 
   padding-left: 15px;
   padding-right: 15px;
-  font-size: 12px;
+  font-size: 16px;
 
   width: 200px;
   height: 54px;
 
   border: none;
-  border-bottom: solid 3px;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
 }
 
 #password.error {
@@ -321,7 +318,7 @@ export default {
 @media (max-height: 850px) {
   #password {
     height: 49px;
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 
