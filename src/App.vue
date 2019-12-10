@@ -36,37 +36,6 @@
         }
     }
 
-    @font-face {
-        font-family: 'Lato';
-        font-style: italic;
-        font-weight: bold;
-        src: url('assets/fonts/Lato-BoldItalic.ttf');
-    }
-
-    @font-face {
-        font-family: 'Lato';
-        src: url('assets/fonts/Lato-Regular.ttf');
-    }
-
-    @font-face {
-        font-family: "Lato";
-        font-style: italic;
-        src: url('assets/fonts/Lato-Italic.ttf');
-    }
-
-    @font-face {
-        font-family: 'Lato';
-        font-weight: 300;
-        src: url('assets/fonts/Lato-Light.ttf');
-    }
-
-    @font-face {
-        font-family: "Lato";
-        font-style: italic;
-        font-weight: 300;
-        src: url('assets/fonts/Lato-LightItalic.ttf');
-    }
-
     html, body, #app, #app > *, .base > * {
         margin: 0;
         padding: 0;

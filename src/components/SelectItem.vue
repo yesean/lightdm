@@ -71,7 +71,7 @@
 
 <style lang="scss" scoped>
     .item {
-        font-family: 'Lato', 'Noto Sans', sans-serif;
+        font-family: 'Inter';
         font-style: italic;
 
         border-radius: 5px;
