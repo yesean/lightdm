@@ -1,9 +1,3 @@
-# Litarvan's LightDM WebKit2 theme
-
-[![Arch Release](https://img.shields.io/badge/arch-2.0.7-blue.svg?style=flat-square)](https://www.archlinux.org/packages/community/any/lightdm-webkit-theme-litarvan/)&nbsp; [![Latest Release](https://img.shields.io/github/release/Litarvan/lightdm-webkit-theme-litarvan.svg?style=flat-square&label=github)](https://github.com/Litarvan/lightdm-webkit-theme-litarvan/releases) &nbsp;![Github downloads](https://img.shields.io/github/downloads/Litarvan/lightdm-webkit-theme-litarvan/total.svg?style=flat-square)
-
-**=> Screenshots below**
-
 # [Live testing (3.0.0)](https://litarvan.github.io/lightdm-webkit-theme-litarvan/)
 
 # Customize release
