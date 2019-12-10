@@ -92,14 +92,14 @@
 
     .item.desktop {
         font-weight: 400;
-        font-size: 12px;
+        font-size: 16px;
         padding: 7px 19px;
         margin-bottom: 20px;
     }
 
     .item.user {
         font-weight: 400;
-        font-size: 12px;
+        font-size: 16px;
         padding: 3px 18px 8px;
         margin-bottom: 25px;
     }
@@ -132,11 +132,11 @@
 
     @media (max-height: 850px) {
         .item.user {
-            font-size: 12px;
+            font-size: 16px;
         }
 
         .item.desktop {
-            font-size: 12px;
+            font-size: 16px;
         }
 
         .icon {

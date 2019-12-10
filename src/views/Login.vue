@@ -184,7 +184,7 @@ export default {
   }
 
   #info {
-    font-size: 12px;
+    font-size: 16px;
     height: 26px;
     margin-top: 5px;
   }
@@ -261,7 +261,8 @@ export default {
   width: 200px;
   height: 54px;
 
-  border: none;
+  border: 4px solid transparent;
+  border-radius: 4px;
 }
 
 #password.error {
@@ -276,7 +277,7 @@ export default {
 
 #info {
   color: rgba(255, 255, 255, 0.875);
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 400;
   margin-top: 15px;
   height: 31px;
