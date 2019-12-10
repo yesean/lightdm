@@ -50,8 +50,8 @@ export default {
 <style lang="scss" scoped>
 #select {
   display: flex;
-  align-items: left;
-  justify-content: left;
+  align-items: center;
+  justify-content: center;
 
   font-family: "Inter";
   font-weight: normal;

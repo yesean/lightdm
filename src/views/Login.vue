@@ -259,7 +259,7 @@ export default {
   font-size: 16px;
 
   width: 200px;
-  height: 54px;
+  height: 40px;
 
   border: 4px solid transparent;
   border-radius: 4px;
@@ -314,13 +314,6 @@ export default {
   position: absolute;
   bottom: 20px;
   right: 20px;
-}
-
-@media (max-height: 850px) {
-  #password {
-    height: 49px;
-    font-size: 16px;
-  }
 }
 
 .power-fade-enter-active {
