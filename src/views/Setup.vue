@@ -85,15 +85,13 @@
 
     #setup {
         font-family: 'Inter';
-        font-weight: 300;
-        font-style: italic;
-
+        font-weight: 400;
         color: $outer-foreground;
     }
 
     #setup-title {
-        font-size: 72px;
-        font-weight: 300;
+        font-size: 48px;
+        font-weight: 400;
         margin-top: 7vh;
     }
 
@@ -212,7 +210,7 @@
         margin-top: 7vh;
 
         text-align: left;
-        font-size: 30px;
+        font-size: 24px;
 
         width: 35%;
 

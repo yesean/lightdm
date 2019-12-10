@@ -72,7 +72,7 @@
 <style lang="scss" scoped>
     .item {
         font-family: 'Inter';
-        font-style: italic;
+        
 
         border-radius: 5px;
         transition: background-color 125ms ease-in-out;
@@ -91,19 +91,16 @@
     }
 
     .item.desktop {
-        font-weight: 300;
+        font-weight: 400;
         font-size: 44px;
-
         padding: 7px 19px;
         margin-bottom: 20px;
     }
 
     .item.user {
-        font-weight: 300;
+        font-weight: 400;
         font-size: 42px;
-
         padding: 3px 18px 8px;
-
         margin-bottom: 25px;
     }
 

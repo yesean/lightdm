@@ -54,7 +54,6 @@
 
     #intro {
         background-color: $outer-background;
-
         display: flex;
         align-items: center;
         text-align: center;
@@ -66,12 +65,11 @@
     }
 
     #logo {
-        height: 250px;
+        height: 125px;
     }
 
     #power-text {
-        font-family: 'Lato', 'Noto Sans', serif;
-        font-style: italic;
+        font-family: 'Inter';
         font-weight: normal;
         color: $outer-foreground;
         font-size: 58px;

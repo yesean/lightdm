@@ -168,7 +168,7 @@
 
     #theming-title {
         font-size: 72px;
-        font-weight: 300;
+        font-weight: 400;
         margin: 0;
 
         margin-bottom: 15px;
@@ -215,9 +215,9 @@
     }
 
     .color-value {
-        font-style: italic;
+        
         margin-left: 15px;
-        font-weight: 300;
+        font-weight: 400;
     }
 
     .color-preview {
@@ -257,7 +257,7 @@
 
             font-size: 18px;
             font-family: 'Inter';
-            font-style: italic;
+            
         }
     }
 
@@ -272,8 +272,8 @@
         margin-top: 25px;
 
         font-size: 32px;
-        font-weight: 300;
-        font-style: italic;
+        font-weight: 400;
+        
     }
 
     #picking-hex {
@@ -309,8 +309,8 @@
         cursor: default;
 
         font-size: 28px;
-        font-weight: 300;
-        font-style: italic;
+        font-weight: 400;
+        
 
         margin-top: 1px;
     }
@@ -364,7 +364,7 @@
         bottom: 35px;
 
         font-size: 28px;
-        font-weight: 300;
-        font-style: italic;
+        font-weight: 400;
+        
     }
 </style>

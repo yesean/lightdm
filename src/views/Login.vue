@@ -13,12 +13,11 @@
                 <form v-if="!immutable" @submit.prevent="submit">
                     <input id="password" type="password" v-model="password" :placeholder="passwordLabel" :readonly="logging" :class="{'error': error}" />
                 </form>
+
                 <div v-else id="password" class="immutable"></div>
                 <div id="info">
                     {{ info }}
                 </div>
-
-                <SelectItem mode="desktop" :item="settings.desktop" @select="!immutable && $router.push('/base/select/desktop')" />
             </div>
         </div>
 
@@ -212,7 +211,7 @@
     }
 
     #password {
-        font-weight: 300;
+        font-weight: 400;
     }
 
     #password, #password:focus {
@@ -220,7 +219,7 @@
     }
 
     #password::placeholder {
-        font-style: italic;
+        
         color: rgba($secondary-color, 0.55);
         opacity: 1;
     }
@@ -259,8 +258,8 @@
         color: rgba(255, 255, 255, 0.875);
 
         font-size: 22px;
-        font-weight: 300;
-        font-style: italic;
+        font-weight: 400;
+        
 
         text-align: center;
 

@@ -54,9 +54,8 @@
     }
 
     #trigger {
-        font-family: 'Lato', 'Noto Sans', serif;
-        font-weight: 300;
-        font-style: italic;
+        font-family: 'Inter';
+        font-weight: 400;
         font-size: 32px;
         cursor: default;
 
