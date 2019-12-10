@@ -185,7 +185,7 @@ export default {
 }
 
 .item.user {
-  margin-bottom: 13px;
+  margin-bottom: 3.5vh;
 }
 
 #login-content {
