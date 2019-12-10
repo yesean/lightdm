@@ -36,7 +36,7 @@
     </div>
 
     <div v-if="!immutable">
-      <PowerButton id="settings" type="settings"></PowerButton>
+      <!-- <PowerButton id="settings" type="settings"></PowerButton> -->
 
       <transition name="power-fade">
         <div id="power-list" v-if="powerList">
@@ -150,16 +150,6 @@ export default {
     margin-bottom: 0;
   }
 
-  #login-content {
-    margin-top: 10.5vh;
-  }
-
-  @media (min-height: 900px) {
-    #login-content {
-      margin-top: 14.25vh;
-    }
-  }
-
   #login-content.no-avatar {
     .item.user {
       margin-bottom: 2vh;
@@ -199,13 +189,7 @@ export default {
 }
 
 #login-content {
-  margin-top: 11.5vh;
-}
-
-@media (min-height: 850px) {
-  #login-content {
-    margin-top: 14vh;
-  }
+  margin-top: 35vh;
 }
 
 #login-content.no-avatar {
@@ -221,7 +205,7 @@ export default {
 }
 
 #avatar-image {
-  height: 200px;
+  height: 80px;
 }
 
 .round {
@@ -248,8 +232,6 @@ export default {
 }
 
 #password {
-  margin-top: 4.5vh;
-
   background: $password-field-background;
   caret-color: $password-field-caret;
   color: $secondary-color;
