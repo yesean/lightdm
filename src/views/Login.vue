@@ -36,7 +36,7 @@
     </div>
 
     <div v-if="!immutable">
-      <!-- <PowerButton id="settings" type="settings"></PowerButton> -->
+      <PowerButton id="settings" type="settings"></PowerButton>
 
       <transition name="power-fade">
         <div id="power-list" v-if="powerList">
