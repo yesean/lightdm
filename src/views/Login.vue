@@ -184,7 +184,7 @@ export default {
   }
 
   #info {
-    font-size: 17px;
+    font-size: 12px;
     height: 26px;
     margin-top: 5px;
   }
@@ -256,9 +256,9 @@ export default {
 
   padding-left: 15px;
   padding-right: 15px;
-  font-size: 24px;
+  font-size: 12px;
 
-  width: 400px;
+  width: 200px;
   height: 54px;
 
   border: none;
@@ -279,7 +279,7 @@ export default {
 
 #info {
   color: rgba(255, 255, 255, 0.875);
-  font-size: 22px;
+  font-size: 12px;
   font-weight: 400;
   margin-top: 15px;
   height: 31px;
@@ -321,7 +321,7 @@ export default {
 @media (max-height: 850px) {
   #password {
     height: 49px;
-    font-size: 22px;
+    font-size: 12px;
   }
 }
 
