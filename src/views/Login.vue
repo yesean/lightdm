@@ -171,7 +171,7 @@ export default {
 
     #login-form {
       margin-left: 0;
-      text-align: center;
+      text-align: left;
     }
   }
 
