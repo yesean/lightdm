@@ -127,7 +127,7 @@ export default {
 }
 
 #setup-title {
-  font-size: 48px;
+  font-size: 24px;
   font-weight: 400;
   margin-top: 7vh;
 }
@@ -251,7 +251,7 @@ export default {
   margin-top: 7vh;
 
   text-align: left;
-  font-size: 24px;
+  font-size: 16px;
 
   width: 35%;
 

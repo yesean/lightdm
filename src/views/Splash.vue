@@ -56,7 +56,7 @@ export default {
 #trigger {
   font-family: "Inter";
   font-weight: 400;
-  font-size: 32px;
+  font-size: 16px;
   cursor: default;
 
   margin-bottom: 11.5vh;

@@ -55,7 +55,7 @@ export default {
 
   font-family: "Inter";
   font-weight: normal;
-  font-size: 44px;
+  font-size: 16px;
 
   text-align: left;
 }

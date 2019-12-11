@@ -196,7 +196,7 @@ export default {
 }
 
 #theming-title {
-  font-size: 72px;
+  font-size: 24px;
   font-weight: 400;
   margin: 0;
 
@@ -219,7 +219,7 @@ export default {
   margin-top: 20px;
   margin-left: 20px;
 
-  font-size: 24px;
+  font-size: 16px;
 
   width: 50%;
 }
@@ -271,7 +271,7 @@ export default {
   width: 50%;
 
   label {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   input {
@@ -283,7 +283,7 @@ export default {
 
     margin-left: 8px;
 
-    font-size: 18px;
+    font-size: 16px;
     font-family: "Inter";
   }
 }
@@ -298,7 +298,7 @@ export default {
 #picking-title {
   margin-top: 25px;
 
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 400;
 }
 
@@ -334,7 +334,7 @@ export default {
 .background-label {
   cursor: default;
 
-  font-size: 28px;
+  font-size: 16px;
   font-weight: 400;
 
   margin-top: 1px;
@@ -371,7 +371,7 @@ export default {
   margin-top: 20px;
 
   .background-label {
-    font-size: 24px;
+    font-size: 16px;
   }
 
   .checkbox {
@@ -388,7 +388,7 @@ export default {
   right: 40px;
   bottom: 35px;
 
-  font-size: 28px;
+  font-size: 16px;
   font-weight: 400;
 }
 </style>

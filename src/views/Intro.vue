@@ -80,7 +80,7 @@ export default {
   font-family: "Inter";
   font-weight: normal;
   color: $outer-foreground;
-  font-size: 58px;
+  font-size: 16px;
 }
 
 .logo-fade-enter-active,
