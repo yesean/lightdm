@@ -42,7 +42,7 @@ export function save(s) {
 
 export function avatar(avatar) {
   if (!avatar || avatar === "") {
-    return require("./assets/images/default_user.png");
+    return require("./assets/images/eh8.png");
   }
 
   if (avatar === "eh8") {
