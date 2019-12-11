@@ -94,7 +94,7 @@ export default {
 }
 
 #power-icon {
-  width: 50px;
+  width: 24px;
 
   margin-bottom: -5px;
   margin-right: 4px;
