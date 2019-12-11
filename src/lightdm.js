@@ -52,9 +52,9 @@ if (window.lightdm_debug) {
             display_name: 'John Doe',
             username: 'johnd'
         }, {
-            display_name: 'Adrien Navratil',
-            username: 'litarvan',
-            image: 'litarvan'
+            display_name: 'Eric Cheng',
+            username: 'eh8',
+            image: 'eh8'
         }],
         languages: [{
             name: 'American English',
