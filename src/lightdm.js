@@ -52,7 +52,7 @@ if (window.lightdm_debug) {
             display_name: 'John Doe',
             username: 'johnd'
         }, {
-            display_name: 'Eric Cheng',
+            display_name: 'eh8',
             username: 'eh8',
             image: 'eh8'
         }],
