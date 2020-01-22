@@ -81,7 +81,9 @@ export default {
         if (key.indexOf("budgie") > -1 || key.indexOf("solus") > -1) {
           icon = "budgie";
         }
-
+        if (key.indexOf("bspwm") >-1) {
+          icon = "bspwm";
+        }
         if (!icon) {
           return "";
         }
