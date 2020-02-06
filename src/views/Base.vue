@@ -35,11 +35,11 @@ export default {
 <style lang="scss">
 @import "../theme";
 
-.bg {
-  background-size: cover;
-  position: fixed;
-  left: 0;
-  right: 0;
+    .bg {
+        background-size: cover;
+        position: absolute;
+        left: 0;
+        right: 0;
 
   display: block;
   width: 100%;
