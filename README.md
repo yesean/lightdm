@@ -4,8 +4,7 @@
 
 ## General tips
 1. Make sure you have node and npm on your machine. Run ```npm i``` prior to ```install.sh``` to install npm dependencies. This step is generally only necessary for first-time setup.
-1. The theme pulls ```~/Pictures/Wallpapers/background.png``` to the ```/usr/share/backgrounds``` folder. You can disable this functionality by uncommenting the respective lines in ```install.sh```
-1. To attain the same settings as the unixporn post, you'll need to disable the splash text and enable rounded avatars.
+2. To attain the same settings as the unixporn post, you'll need to disable the splash text and enable rounded avatars.
 
 ### Do I really have to reboot after I modify and rebuild the theme to see my changes?
 

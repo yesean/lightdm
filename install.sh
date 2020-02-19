@@ -7,11 +7,6 @@ echo "Removing old copy of LightDM theme..."
 sudo rm -rf /usr/share/lightdm-webkit/themes/eh8/*
 echo "Done"
 
-echo "Copying background to directory.."
-cp ~/Pictures/Wallpapers/background.png src/assets/images/
-sudo cp src/assets/images/background.png /usr/share/backgrounds
-echo "Done"
-
 echo "Running Vue setup..."
 sudo rm -r dist/
 npm run-script build

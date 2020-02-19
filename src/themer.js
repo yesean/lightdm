@@ -1,7 +1,6 @@
 import { settings } from './settings';
 
 export const DEFAULT_COLOR = '#249cea';
-const DEFAULT_BG = require('./assets/images/background.png');
 
 export let color = localStorage.getItem('color') || DEFAULT_COLOR;
 export let background = getBackground();
@@ -53,5 +52,5 @@ function getBackground() {
         return bgs[Math.floor(Math.random() * bgs.length)];
     }
 
-    return localStorage.getItem('background') || DEFAULT_BG;
+    return localStorage.getItem('background');
 }
