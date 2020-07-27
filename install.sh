@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 echo -e "\e[36mBuilding lightdm-eh8"
 echo -e "\e[0m"
