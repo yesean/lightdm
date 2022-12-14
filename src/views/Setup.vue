@@ -63,10 +63,7 @@
       </div>
     </div>
 
-    <div @click="save()">
-      <PowerButton id="back" type="back" />
-    </div>
-
+    <PowerButton id="back" type="back" />
     <PowerButton id="theming" type="theming" />
   </div>
 </template>

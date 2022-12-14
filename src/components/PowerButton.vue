@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { settings } from '@/settings';
+import { settings, save } from '@/settings';
 
 export default {
   name: 'power-button',
@@ -19,11 +19,9 @@ export default {
   methods: {
     apply() {
       if (this.type === 'back') {
-        this.$router.push(
-          settings.disableSplash || !settings.first
-            ? '/base/login'
-            : '/base/splash',
-        );
+        save();
+        this.$router.back();
+
         return;
       }
 
