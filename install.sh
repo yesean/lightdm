@@ -3,8 +3,10 @@
 echo -e "\e[36mBuilding lightdm-eh8"
 echo -e "\e[0m"
 
+themes_dir=/usr/share/web-greeter/themes/eh8/
+
 echo "Removing old copy of LightDM theme..."
-sudo rm -rf /usr/share/lightdm-webkit/themes/eh8/*
+sudo rm -rf "$themes_dir"/*
 echo "Done"
 
 echo "Running Vue setup..."
@@ -14,12 +16,12 @@ echo "Done"
 
 echo "Building directory..."
 pushd dist && tar zcvf ../lightdm-eh8.tar.gz ./* && popd
-sudo mkdir -p /usr/share/lightdm-webkit/themes/eh8/
-sudo mv lightdm-eh8.tar.gz /usr/share/lightdm-webkit/themes/eh8/ 
+sudo mkdir -p "$themes_dir"
+sudo mv lightdm-eh8.tar.gz "$themes_dir"
 echo "Done"
 
 echo "Entering directory and running final decompression..."
-cd /usr/share/lightdm-webkit/themes/eh8/
+cd "$themes_dir"
 sudo tar xvf lightdm-eh8.tar.gz
 echo "Done"
 
