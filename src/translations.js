@@ -130,7 +130,10 @@ function getLocale() {
   }
 
   lightdm.languages.forEach((l) => {
-    if (l.name.toLowerCase() === lightdm.language.toLowerCase()) {
+    let language = lightdm.language;
+    if (typeof language === 'string') language = language.toLowerCase();
+    else language = language.name.toLowerCase();
+    if (l.name.toLowerCase() === language) {
       lang = l.code.split('.')[0].replace('_', '-');
     }
   });

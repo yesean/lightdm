@@ -25,7 +25,7 @@ export default {
   methods: {
     submit(event) {
       if (event.which === 13 || event.which === 32) {
-        this.$router.push('/base/login');
+        this.$router.push('/base/login').catch(() => {});
       }
     },
   },

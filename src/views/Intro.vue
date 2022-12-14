@@ -28,9 +28,9 @@ export default {
 
   mounted() {
     if (settings.disableIntro && this.state === 'initial') {
-      this.$router.push(
-        settings.disableSplash ? '/base/login' : '/base/splash',
-      );
+      this.$router
+        .push(settings.disableSplash ? '/base/login' : '/base/splash')
+        .catch(() => {});
       return;
     }
 
@@ -43,13 +43,15 @@ export default {
     if (this.state === 'initial') {
       setTimeout(() => {
         this.show = false;
-        this.$router.push(
-          settings.first
-            ? '/setup'
-            : settings.disableSplash
-            ? '/base/login'
-            : '/base/splash',
-        );
+        this.$router
+          .push(
+            settings.first
+              ? '/setup'
+              : settings.disableSplash
+              ? '/base/login'
+              : '/base/splash',
+          )
+          .catch(() => {});
       }, 2000);
     }
   },
