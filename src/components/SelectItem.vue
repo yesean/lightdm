@@ -1,7 +1,11 @@
 <template>
   <div
     class="item"
-    :class="{ 'user': mode === 'user', 'desktop': mode === 'desktop', 'selected': selected }"
+    :class="{
+      user: mode === 'user',
+      desktop: mode === 'desktop',
+      selected: selected,
+    }"
     v-theming="['border-bottom-color']"
     @click="select()"
   >
@@ -17,76 +21,76 @@
 </template>
 
 <script>
-import { avatar } from "@/settings";
+import { avatar } from '@/settings';
 export default {
-  name: "select-item",
-  props: ["mode", "item", "selected", "noicon"],
+  name: 'select-item',
+  props: ['mode', 'item', 'selected', 'noicon'],
   methods: {
     select() {
-      this.$emit("select");
+      this.$emit('select');
     },
     icon() {
-      if (this.mode === "user") {
+      if (this.mode === 'user') {
         return avatar(this.item.image);
       }
-      if (this.mode === "desktop") {
+      if (this.mode === 'desktop') {
         let key = this.item.key.toLowerCase();
         let icon;
-        if (key.indexOf("plasma") > -1 || key.indexOf("kde") > -1) {
-          icon = "kde";
+        if (key.indexOf('plasma') > -1 || key.indexOf('kde') > -1) {
+          icon = 'kde';
         }
-        if (key.indexOf("gnome") > -1) {
-          icon = "gnome";
+        if (key.indexOf('gnome') > -1) {
+          icon = 'gnome';
         }
-        if (key.indexOf("xfce") > -1) {
-          icon = "xfce";
+        if (key.indexOf('xfce') > -1) {
+          icon = 'xfce';
         }
-        if (key.indexOf("unity") > -1 || key.indexOf("ubuntu") > -1) {
-          icon = "ubuntu";
+        if (key.indexOf('unity') > -1 || key.indexOf('ubuntu') > -1) {
+          icon = 'ubuntu';
         }
-        if (key.indexOf("dde") > -1 || key.indexOf("deepin") > -1) {
-          icon = "deepin";
+        if (key.indexOf('dde') > -1 || key.indexOf('deepin') > -1) {
+          icon = 'deepin';
         }
-        if (key.indexOf("lxde") > -1 || key.indexOf("lxqt") > -1) {
-          icon = "lxde";
+        if (key.indexOf('lxde') > -1 || key.indexOf('lxqt') > -1) {
+          icon = 'lxde';
         }
-        if (key.indexOf("pantheon") > -1 || key.indexOf("elementary") > -1) {
-          icon = "elementary";
+        if (key.indexOf('pantheon') > -1 || key.indexOf('elementary') > -1) {
+          icon = 'elementary';
         }
-        if (key.indexOf("mate") > -1) {
-          icon = "mate";
+        if (key.indexOf('mate') > -1) {
+          icon = 'mate';
         }
-        if (key.indexOf("cinnamon") > -1 || key.indexOf("mint") > -1) {
-          icon = "cinnamon";
+        if (key.indexOf('cinnamon') > -1 || key.indexOf('mint') > -1) {
+          icon = 'cinnamon';
         }
         if (
-          key.indexOf("enlightenment") > -1 ||
+          key.indexOf('enlightenment') > -1 ||
           (key.length === 3 && /e[1-9]{2}/g.test(key))
         ) {
-          icon = "enlightenment";
+          icon = 'enlightenment';
         }
-        if (key.indexOf("liri") > -1) {
-          icon = "liri";
+        if (key.indexOf('liri') > -1) {
+          icon = 'liri';
         }
-        if (key.indexOf("i3") > -1) {
-          icon = "i3";
+        if (key.indexOf('i3') > -1) {
+          icon = 'i3';
         }
-        if (key.indexOf("xmonad") > -1) {
-          icon = "xmonad";
+        if (key.indexOf('xmonad') > -1) {
+          icon = 'xmonad';
         }
-        if (key.indexOf("budgie") > -1 || key.indexOf("solus") > -1) {
-          icon = "budgie";
+        if (key.indexOf('budgie') > -1 || key.indexOf('solus') > -1) {
+          icon = 'budgie';
         }
-        if (key.indexOf("awesome") > -1) {
-          icon = "awesome";
+        if (key.indexOf('awesome') > -1) {
+          icon = 'awesome';
         }
-        if (key.indexOf("bspwm") > -1) {
-          icon = "bspwm";
+        if (key.indexOf('bspwm') > -1) {
+          icon = 'bspwm';
         }
         if (!icon) {
-          return "";
+          return '';
         }
-        return require("../assets/images/desktops/" + icon + ".png");
+        return require('../assets/images/desktops/' + icon + '.png');
       }
     },
   },
@@ -95,7 +99,7 @@ export default {
 
 <style lang="scss" scoped>
 .item {
-  font-family: "Inter";
+  font-family: 'Inter';
 
   border-radius: 5px;
   transition: background-color 125ms ease-in-out;

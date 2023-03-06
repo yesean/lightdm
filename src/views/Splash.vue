@@ -6,29 +6,29 @@
 </template>
 
 <script>
-import Clock from "@/components/Clock.vue";
-import { trans } from "@/translations";
-import { settings } from "@/settings";
+import Clock from '@/components/Clock.vue';
+import { trans } from '@/translations';
+import { settings } from '@/settings';
 
 export default {
-  name: "splash",
+  name: 'splash',
   components: { Clock },
   mounted() {
-    window.addEventListener("keyup", this.submit);
+    window.addEventListener('keyup', this.submit);
   },
   data() {
     return {
-      trigger: trans("trigger"),
-      clockOnly: settings.disableSplashText
+      trigger: trans('trigger'),
+      clockOnly: settings.disableSplashText,
     };
   },
   methods: {
     submit(event) {
       if (event.which === 13 || event.which === 32) {
-        this.$router.push("/base/login");
+        this.$router.push('/base/login');
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -54,7 +54,7 @@ export default {
 }
 
 #trigger {
-  font-family: "Inter";
+  font-family: 'Inter';
   font-weight: 400;
   font-size: 16px;
   cursor: default;

@@ -8,12 +8,12 @@ import { hook } from './themer';
 Vue.config.productionTip = false;
 
 Vue.directive('theming', {
-    bind(el, { value }) {
-        hook(el, value);
-    }
+  bind(el, { value }) {
+    hook(el, value);
+  },
 });
 
 new Vue({
-    router,
-    render: h => h(App)
+  router,
+  render: (h) => h(App),
 }).$mount('#app');

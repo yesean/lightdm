@@ -13,33 +13,33 @@
 </template>
 
 <script>
-import { background } from "../themer";
+import { background } from '../themer';
 
 export default {
-  name: "l-base",
+  name: 'l-base',
 
   data() {
     return {
-      background
+      background,
     };
   },
   methods: {
     isBlured() {
       let name = this.$router.currentRoute.name;
-      return name === "login" || name === "select";
-    }
-  }
+      return name === 'login' || name === 'select';
+    },
+  },
 };
 </script>
 
 <style lang="scss">
-@import "../theme";
+@import '../theme';
 
-    .bg {
-        background-size: cover;
-        position: absolute;
-        left: 0;
-        right: 0;
+.bg {
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
 
   display: block;
   width: 100%;

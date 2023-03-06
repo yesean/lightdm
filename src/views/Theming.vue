@@ -7,35 +7,65 @@
         <div id="colors">
           <div class="color">
             <span class="color-label">{{ colorLabel }}</span>
-            <img class="color-reset" @click="reset()" src="../assets/images/restart.svg" />
+            <img
+              class="color-reset"
+              @click="reset()"
+              src="../assets/images/restart.svg"
+            />
             <div>
               <span class="color-value">{{ color }}</span>
-              <div class="color-preview" :style="'background-color: ' + color + ';'"></div>
+              <div
+                class="color-preview"
+                :style="'background-color: ' + color + ';'"
+              ></div>
             </div>
           </div>
         </div>
         <div id="color-picking">
-          <div id="picking-preview" :style="'background-color: ' + color + ';'"></div>
+          <div
+            id="picking-preview"
+            :style="'background-color: ' + color + ';'"
+          ></div>
           <div id="picking-title">{{ colorLabel }}</div>
 
           <div>
             <label for="picking-hex">
               Hex :
-              <input id="picking-hex" v-model="hex" maxlength="7" @keypress="filterHex" />
+              <input
+                id="picking-hex"
+                v-model="hex"
+                maxlength="7"
+                @keypress="filterHex"
+              />
             </label>
           </div>
           <div id="rgb">
             <label for="picking-r">
               R :
-              <input id="picking-r" v-model="r" maxlength="3" @keyup="filterRGB" />
+              <input
+                id="picking-r"
+                v-model="r"
+                maxlength="3"
+                @keyup="filterRGB"
+              />
             </label>
             <label for="picking-g">
               G :
-              <input id="picking-g" v-model="g" maxlength="3" @keyup="filterRGB" />
+              <input
+                id="picking-g"
+                v-model="g"
+                maxlength="3"
+                @keyup="filterRGB"
+              />
             </label>
             <label for="picking-b">
               B :
-              <input id="picking-b" v-model="b" maxlength="3" @keyup="filterRGB" />
+              <input
+                id="picking-b"
+                v-model="b"
+                maxlength="3"
+                @keyup="filterRGB"
+              />
             </label>
           </div>
         </div>
@@ -65,21 +95,21 @@
 </template>
 
 <script>
-import Checkbox from "../components/Checkbox";
-import PowerButton from "../components/PowerButton";
+import Checkbox from '../components/Checkbox';
+import PowerButton from '../components/PowerButton';
 import {
   background,
   color,
   updateColor,
   updateBG,
   DEFAULT_COLOR,
-  backgrounds
-} from "../themer";
-import { trans } from "../translations";
-import { settings, save as saveSettings } from "../settings";
+  backgrounds,
+} from '../themer';
+import { trans } from '../translations';
+import { settings, save as saveSettings } from '../settings';
 
 export default {
-  name: "theming",
+  name: 'theming',
   components: { Checkbox, PowerButton },
 
   mounted() {
@@ -94,20 +124,20 @@ export default {
   },
   data() {
     return {
-      title: trans("theming"),
+      title: trans('theming'),
       backgrounds: backgrounds(),
       background: 0,
       bgPath: greeter_config.branding.background_images,
-      bgAddLabel: trans("bgAdd"),
+      bgAddLabel: trans('bgAdd'),
       settings,
       saveSettings,
-      randomizeLabel: trans("randomizeBG"),
+      randomizeLabel: trans('randomizeBG'),
       color: color,
-      colorLabel: trans("primaryColor"),
-      hex: "",
+      colorLabel: trans('primaryColor'),
+      hex: '',
       r: 0,
       g: 0,
-      b: 0
+      b: 0,
     };
   },
   methods: {
@@ -116,7 +146,7 @@ export default {
     },
     filterHex(ev) {
       if (
-        !(!this.hex.startsWith("#") && ev.location === 0 && ev.key === "#") &&
+        !(!this.hex.startsWith('#') && ev.location === 0 && ev.key === '#') &&
         !ev.key.match(/[A-f\d]/)
       ) {
         ev.preventDefault();
@@ -131,23 +161,23 @@ export default {
     },
     toHex(...rgb) {
       return (
-        (this.hex.startsWith("#") ? "#" : "") +
+        (this.hex.startsWith('#') ? '#' : '') +
         rgb
-          .map(n => {
+          .map((n) => {
             const hex = Math.min(255, Math.max(0, n)).toString(16);
-            return hex.length === 1 ? "0" + hex : hex;
+            return hex.length === 1 ? '0' + hex : hex;
           })
-          .join("")
+          .join('')
       );
     },
     toRGB(hex) {
-      if (hex.length < (hex.startsWith("#") ? 3 : 2)) {
+      if (hex.length < (hex.startsWith('#') ? 3 : 2)) {
         return [];
       }
 
-      return (hex.startsWith("#") ? hex.substring(1) : hex)
+      return (hex.startsWith('#') ? hex.substring(1) : hex)
         .match(/[A-f\d]{2}/g)
-        .map(s => parseInt(s, 16));
+        .map((s) => parseInt(s, 16));
     },
     nextBG() {
       if (this.background === this.backgrounds.length - 1) {
@@ -162,7 +192,7 @@ export default {
       } else {
         this.background--;
       }
-    }
+    },
   },
   watch: {
     hex(val) {
@@ -177,19 +207,19 @@ export default {
     },
     background(val) {
       updateBG(this.backgrounds[val]);
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style lang="scss">
-@import "../theme";
+@import '../theme';
 
 #theming-view {
   color: $outer-foreground;
   text-align: left;
 
-  font-family: "Inter";
+  font-family: 'Inter';
 
   padding: 35px;
   box-sizing: border-box;
@@ -284,7 +314,7 @@ export default {
     margin-left: 8px;
 
     font-size: 16px;
-    font-family: "Inter";
+    font-family: 'Inter';
   }
 }
 

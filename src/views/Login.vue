@@ -1,12 +1,12 @@
 <template>
-  <div class="login" :class="{ 'compact': isCompact }">
+  <div class="login" :class="{ compact: isCompact }">
     <Clock :small="true" v-if="isCompact" />
 
     <div id="login-content" :class="{ 'no-avatar': settings.disableAvatar }">
       <div id="avatar" v-if="!settings.disableAvatar">
         <img
           id="avatar-image"
-          :class="{ 'round': settings.roundAvatar }"
+          :class="{ round: settings.roundAvatar }"
           :src="avatar(settings.user.image)"
         />
       </div>
@@ -26,7 +26,7 @@
             v-model="password"
             :placeholder="passwordLabel"
             :readonly="logging"
-            :class="{'error': error}"
+            :class="{ error: error }"
           />
         </form>
 
@@ -42,48 +42,56 @@
 
       <transition name="power-fade">
         <div id="power-list" v-if="powerList">
-          <PowerButton v-if="canSuspend" id="suspend" type="suspend"></PowerButton>
+          <PowerButton
+            v-if="canSuspend"
+            id="suspend"
+            type="suspend"
+          ></PowerButton>
           <PowerButton id="reboot" type="restart"></PowerButton>
         </div>
       </transition>
 
       <div @click="powerList = !powerList">
-        <PowerButton id="shutdown" type="shutdown" :disabled="!powerList"></PowerButton>
+        <PowerButton
+          id="shutdown"
+          type="shutdown"
+          :disabled="!powerList"
+        ></PowerButton>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import PowerButton from "@/components/PowerButton.vue";
-import Clock from "@/components/Clock.vue";
-import { avatar, settings } from "@/settings";
-import { trans } from "@/translations";
-import SelectItem from "../components/SelectItem";
+import PowerButton from '@/components/PowerButton.vue';
+import Clock from '@/components/Clock.vue';
+import { avatar, settings } from '@/settings';
+import { trans } from '@/translations';
+import SelectItem from '../components/SelectItem';
 
 export default {
-  name: "login",
+  name: 'login',
   components: { SelectItem, PowerButton, Clock },
-  props: ["immutable", "compact"],
+  props: ['immutable', 'compact'],
 
   data() {
     return {
       canSuspend: lightdm.can_suspend,
-      passwordLabel: trans("password"),
-      isCompact: this.immutable ? this.compact : settings.mode === "compact",
+      passwordLabel: trans('password'),
+      isCompact: this.immutable ? this.compact : settings.mode === 'compact',
       settings,
       powerList: false,
       logging: false,
       error: false,
-      info: "",
+      info: '',
 
-      password: ""
+      password: '',
     };
   },
   mounted() {
-    window.addEventListener("keyup", this.keyup);
+    window.addEventListener('keyup', this.keyup);
     setTimeout(() => {
-      let p = document.querySelector("#password");
+      let p = document.querySelector('#password');
       p && p.focus();
     }, 650);
   },
@@ -92,14 +100,14 @@ export default {
     keyup(event) {
       if (event.which === 27) {
         this.$router.push(
-          settings.disableSplash ? "/base/login" : "/base/splash"
+          settings.disableSplash ? '/base/login' : '/base/splash',
         );
       }
 
-      if (event.getModifierState("CapsLock")) {
-        this.info = trans("capsLock");
+      if (event.getModifierState('CapsLock')) {
+        this.info = trans('capsLock');
       } else {
-        this.info = "";
+        this.info = '';
       }
     },
     submit() {
@@ -112,22 +120,22 @@ export default {
           this.password,
           () => {
             setTimeout(() => lightdm_start(this.settings.desktop.key), 400);
-            this.$router.push(settings.disableFade ? "/base" : "/intro/login");
+            this.$router.push(settings.disableFade ? '/base' : '/intro/login');
           },
           () => {
             this.error = true;
-            this.password = "";
+            this.password = '';
             this.logging = false;
-          }
+          },
         );
       }, 150);
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-@import "../theme";
+@import '../theme';
 
 .login.compact {
   .clock {
@@ -220,7 +228,7 @@ export default {
 
 #password {
   font-weight: 400;
-  font-family: "Inter";
+  font-family: 'Inter';
 }
 
 #password,

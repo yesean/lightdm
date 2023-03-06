@@ -14,16 +14,16 @@
 </template>
 
 <script>
-import { save, settings } from "@/settings";
-import SelectItem from "../components/SelectItem";
+import { save, settings } from '@/settings';
+import SelectItem from '../components/SelectItem';
 
 const modes = {
-  user: { field: "users", name: "display_name", key: "username" },
-  desktop: { field: "sessions", name: "name", key: "key" }
+  user: { field: 'users', name: 'display_name', key: 'username' },
+  desktop: { field: 'sessions', name: 'name', key: 'key' },
 };
 
 export default {
-  name: "select",
+  name: 'select',
   components: { SelectItem },
   data() {
     let mode = this.$route.params.mode;
@@ -33,7 +33,7 @@ export default {
       mode,
       type,
       content: lightdm[type.field] || [],
-      selected: settings[mode] || {}
+      selected: settings[mode] || {},
     };
   },
 
@@ -42,8 +42,8 @@ export default {
       settings[this.mode] = obj;
       save();
       this.$router.back();
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -53,7 +53,7 @@ export default {
   align-items: center;
   justify-content: center;
 
-  font-family: "Inter";
+  font-family: 'Inter';
   font-weight: normal;
   font-size: 16px;
 

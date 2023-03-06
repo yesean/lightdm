@@ -2,9 +2,16 @@
   <div id="intro">
     <transition name="logo-fade">
       <div id="content" v-if="show">
-        <img v-if="state === 'initial'" id="logo" src="../assets/images/os.png" />
+        <img
+          v-if="state === 'initial'"
+          id="logo"
+          src="../assets/images/os.png"
+        />
         <p v-else id="power-text">
-          <img id="power-icon" :src="require('../assets/images/' + state + '.svg')" />
+          <img
+            id="power-icon"
+            :src="require('../assets/images/' + state + '.svg')"
+          />
           {{ text }}
         </p>
       </div>
@@ -13,35 +20,35 @@
 </template>
 
 <script>
-import { trans } from "@/translations";
-import { settings } from "@/settings";
+import { trans } from '@/translations';
+import { settings } from '@/settings';
 
 export default {
-  name: "intro",
+  name: 'intro',
 
   mounted() {
-    if (settings.disableIntro && this.state === "initial") {
+    if (settings.disableIntro && this.state === 'initial') {
       this.$router.push(
-        settings.disableSplash ? "/base/login" : "/base/splash"
+        settings.disableSplash ? '/base/login' : '/base/splash',
       );
       return;
     }
 
-    if (this.state === "login") {
+    if (this.state === 'login') {
       return;
     }
 
     this.show = true;
 
-    if (this.state === "initial") {
+    if (this.state === 'initial') {
       setTimeout(() => {
         this.show = false;
         this.$router.push(
           settings.first
-            ? "/setup"
+            ? '/setup'
             : settings.disableSplash
-            ? "/base/login"
-            : "/base/splash"
+            ? '/base/login'
+            : '/base/splash',
         );
       }, 2000);
     }
@@ -51,14 +58,14 @@ export default {
     return {
       show: false,
       state: this.$route.params.state,
-      text: trans(this.$route.params.state)
+      text: trans(this.$route.params.state),
     };
-  }
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-@import "../theme";
+@import '../theme';
 
 #intro {
   background-color: $outer-background;
@@ -77,7 +84,7 @@ export default {
 }
 
 #power-text {
-  font-family: "Inter";
+  font-family: 'Inter';
   font-weight: normal;
   color: $outer-foreground;
   font-size: 16px;

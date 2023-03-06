@@ -1,13 +1,13 @@
-let local = localStorage.getItem("settings");
+let local = localStorage.getItem('settings');
 
-if (local === "undefined") {
+if (local === 'undefined') {
   local = null;
 }
 
 export let settings = (local ? JSON.parse(local) : null) || {
   first: true,
 
-  mode: "classic",
+  mode: 'classic',
 
   disableSplash: false,
   disableSplashText: false,
@@ -20,37 +20,37 @@ export let settings = (local ? JSON.parse(local) : null) || {
   randomizeBG: false,
 
   user: lightdm.users[0],
-  desktop: lightdm.sessions[0]
+  desktop: lightdm.sessions[0],
 };
 
 // Handle display name change
 lightdm.users.forEach(
-  u => settings.user.username === u.username && (settings.user = u)
+  (u) => settings.user.username === u.username && (settings.user = u),
 );
 lightdm.sessions.forEach(
-  s => settings.desktop.username === s.key && (settings.desktop = s)
+  (s) => settings.desktop.username === s.key && (settings.desktop = s),
 );
 
 save();
 
 export function save(s) {
   localStorage.setItem(
-    "settings",
-    JSON.stringify(s ? (settings = s) : settings)
+    'settings',
+    JSON.stringify(s ? (settings = s) : settings),
   );
 }
 
 export function avatar(avatar) {
-  if (!avatar || avatar === "") {
-    return require("./assets/images/eh8.png");
+  if (!avatar || avatar === '') {
+    return require('./assets/images/eh8.png');
   }
 
-  if (avatar === "eh8") {
-    return require("./assets/images/eh8.png");
+  if (avatar === 'eh8') {
+    return require('./assets/images/eh8.png');
   }
 
-  if (avatar === "litarvan") {
-    return require("./assets/images/litarvan.png");
+  if (avatar === 'litarvan') {
+    return require('./assets/images/litarvan.png');
   }
 
   return avatar;

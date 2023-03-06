@@ -11,46 +11,46 @@
 </template>
 
 <script>
-import { settings } from "@/settings";
+import { settings } from '@/settings';
 
 export default {
-  name: "power-button",
-  props: ["type", "disabled"],
+  name: 'power-button',
+  props: ['type', 'disabled'],
   methods: {
     apply() {
-      if (this.type === "back") {
+      if (this.type === 'back') {
         this.$router.push(
           settings.disableSplash || !settings.first
-            ? "/base/login"
-            : "/base/splash"
+            ? '/base/login'
+            : '/base/splash',
         );
         return;
       }
 
-      if (this.type === "settings") {
-        this.$router.push("/setup");
+      if (this.type === 'settings') {
+        this.$router.push('/setup');
         return;
       }
 
-      if (this.type === "theming") {
-        this.$router.push("/theming");
+      if (this.type === 'theming') {
+        this.$router.push('/theming');
         return;
       }
 
       setTimeout(lightdm[this.type], 1500);
       this.$router.push(`/intro/${this.type}`);
-    }
+    },
   },
   data() {
     return {
-      types: ["shutdown", "suspend", "restart", "settings", "back"]
+      types: ['shutdown', 'suspend', 'restart', 'settings', 'back'],
     };
-  }
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-@import "../theme";
+@import '../theme';
 
 #button-container {
   transition: background 125ms ease-in-out;

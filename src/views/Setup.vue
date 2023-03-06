@@ -1,5 +1,5 @@
 <template>
-  <div id="setup" :class="{ 'fix': fix }">
+  <div id="setup" :class="{ fix: fix }">
     <h1 id="setup-title">{{ texts.setup }}</h1>
 
     <div id="layouts">
@@ -72,15 +72,15 @@
 </template>
 
 <script>
-import PowerButton from "@/components/PowerButton";
-import Login from "./Login.vue";
-import Checkbox from "@/components/Checkbox.vue";
+import PowerButton from '@/components/PowerButton';
+import Login from './Login.vue';
+import Checkbox from '@/components/Checkbox.vue';
 
-import { trans } from "@/translations";
-import { settings, save } from "@/settings";
+import { trans } from '@/translations';
+import { settings, save } from '@/settings';
 
 export default {
-  name: "setup",
+  name: 'setup',
   components: { PowerButton, Login, Checkbox },
 
   mounted() {
@@ -94,16 +94,16 @@ export default {
       settings: settings,
       fix: !lightdm_debug,
       texts: {
-        setup: trans("setup"),
-        disableSplash: trans("disableSplash"),
-        disableSplashText: trans("disableSplashText"),
-        disableIntro: trans("disableIntro"),
-        disableFade: trans("disableFade"),
-        roundAvatar: trans("roundAvatar"),
-        disableAvatar: trans("disableAvatar"),
-        disableZoom: trans("disableZoom"),
-        clock12: trans("clock12")
-      }
+        setup: trans('setup'),
+        disableSplash: trans('disableSplash'),
+        disableSplashText: trans('disableSplashText'),
+        disableIntro: trans('disableIntro'),
+        disableFade: trans('disableFade'),
+        roundAvatar: trans('roundAvatar'),
+        disableAvatar: trans('disableAvatar'),
+        disableZoom: trans('disableZoom'),
+        clock12: trans('clock12'),
+      },
     };
   },
   methods: {
@@ -112,16 +112,16 @@ export default {
     },
     save() {
       save(this.settings);
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style lang="scss">
-@import "../theme";
+@import '../theme';
 
 #setup {
-  font-family: "Inter";
+  font-family: 'Inter';
   font-weight: 400;
   color: $outer-foreground;
 }
