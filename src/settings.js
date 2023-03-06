@@ -45,13 +45,5 @@ export function avatar(avatar) {
     return require('./assets/images/default_user.png');
   }
 
-  if (avatar === 'sean') {
-    return require('./assets/images/sean.png');
-  }
-
-  if (avatar === 'litarvan') {
-    return require('./assets/images/litarvan.png');
-  }
-
   return avatar;
 }
