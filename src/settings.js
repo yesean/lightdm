@@ -45,8 +45,8 @@ export function avatar(avatar) {
     return require('./assets/images/default_user.png');
   }
 
-  if (avatar === 'eh8') {
-    return require('./assets/images/eh8.png');
+  if (avatar === 'sean') {
+    return require('./assets/images/sean.png');
   }
 
   if (avatar === 'litarvan') {

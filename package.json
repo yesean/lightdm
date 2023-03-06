@@ -1,10 +1,10 @@
 {
-  "name": "lightdm-eh8",
+  "name": "lightdm-sean",
   "version": "1.0.0",
   "license": "MIT",
-  "author": "Eric Cheng",
-  "homepage": "https://github.com/eh8/lightdm-eh8",
-  "repository": "https://github.com/eh8/lightdm-eh8",
+  "author": "Sean Ye",
+  "homepage": "https://github.com/yesean/lightdm",
+  "repository": "https://github.com/yesean/lightdm",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"

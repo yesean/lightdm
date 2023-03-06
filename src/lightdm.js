@@ -58,9 +58,9 @@ if (window.lightdm_debug) {
         username: 'johnd',
       },
       {
-        display_name: 'eh8',
-        username: 'eh8',
-        image: 'eh8',
+        display_name: 'sean',
+        username: 'sean',
+        image: 'sean',
       },
     ],
     languages: [

@@ -1,5 +1,5 @@
 [theme]
-name=lightdm-eh8
-description=eh8
+name=lightdm-sean
+description=sean
 engine=lightdm-webkit-greeter
 url=index.html
